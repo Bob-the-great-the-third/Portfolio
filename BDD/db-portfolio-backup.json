@@ -1,0 +1,101 @@
+{
+    "projets":[
+        {
+            "id":1,
+            "nom":"Site Internet Répertoire",
+            "id_categorie":2,
+            "dates":"2021",
+            "infrastructure":"",
+            "statut":"Fini",
+            "taille_equipe":2,
+            "description":"TMTC"
+        },
+        {
+            "id":2,
+            "nom":"Recueil et traitement de données",
+            "id_categorie":1,
+            "dates":"2024",
+            "infrastructure":"Google Maps API",
+            "statut":"Fini",
+            "taille_equipe":1,
+            "description":"TMTC"
+        },
+
+        {
+            "id":3,
+            "nom":"Stage de Développement dans Vectory3 BV",
+            "id_categorie":3,
+            "dates":"2025",
+            "infrastructure":"Blender Python API",
+            "statut":"Fini",
+            "taille_equipe":7,
+            "description":"TMTC"
+        },
+
+        {
+            "id":4,
+            "nom":"Euler Project",
+            "id_categorie":1,
+            "dates":"2019 to now",
+            "infrastructure":"",
+            "statut":"En cours",
+            "taille_equipe":1,
+            "description":"TMTC"
+        }
+
+    ],
+
+    "competences":[
+        { "id":1, "project_id":1,"competence":"Développement d’un site en Html/CSS/Python" },
+        { "id":2, "project_id":1,"competence":"Lire/Écrire dans un fichier csv en Python" },
+        { "id":3, "project_id":2,"competence":"Interaction avec Maps API." },
+        { "id":4, "project_id":2,"competence":"Création d’un projet à partir d’un besoin client (ma famille)" },
+        { "id":5, "project_id":3,"competence":"Développement d'outils de modélisation 3D" },
+        { "id":6, "project_id":3,"competence":"Utilisation de l'API Python de Blender" }
+    ],
+
+    "langages":[
+        { "id":1, "project_id":1, "langage":"python"},
+        { "id":2, "project_id":1, "langage":"html"},
+        { "id":3, "project_id":1, "langage":"CSS"},
+        { "id":4, "project_id":2, "langage":"javaScript"},
+        { "id":5, "project_id":2, "langage":"html"},
+        { "id":6, "project_id":2, "langage":"CSS"},
+        { "id":7, "project_id":3, "langage":"python"}
+    ],
+
+    "images":[
+        { "id":1, "project_id":1, "img_path":"" }
+    ],
+
+    "videos":[
+        { "id":1, "project_id":1, "vid_path":"" }
+    ],
+
+    "categories":[
+        { "id":1, "categ":"Perso"},
+        { "id":2, "categ":"Univ"},
+        { "id":3, "categ":"Pro"},
+        { "id":4, "categ":"Problèmes"}
+    ],
+
+    "statuts_possibles":[
+        { "id":1, "statut":"Fini"},
+        { "id":2, "statut":"En cours"},
+        { "id":3, "statut":"Prévu"},
+        { "id":4, "statut":"Interrompu"}
+    ],
+
+    "euler_project":[
+        { "id":1, "nom":"Multiples of 3 or 5", "solved_by":1028578, "diff":0.05 }
+    ],
+
+    "leetcode":[
+        { 
+            "id":1, 
+            "nom":"Two Sum",
+            "diff":"easy", 
+            "perf":{ "date":"2024-11-04", "langage":"java", "runtime":0.002, "memory":"45 MB"}
+        }
+    ]
+}

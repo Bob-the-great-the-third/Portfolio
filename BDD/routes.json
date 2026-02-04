@@ -1,0 +1,7 @@
+{
+    "/projets/:projectId/langages": "/langages?project_id=:projectId",
+    "/projets/:projectId/competences": "/competences?project_id=:projectId",
+    "/projets/:projectId/images": "/images?project_id=:projectId",
+    "/projets/:projectId/videos": "/videos?project_id=:projectId",
+    "/projets/starred_projects": "/projets?starred=true"
+}

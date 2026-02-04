@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Portfolio <i class="fa-solid fa-briefcase"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
+      aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor04">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Projects <i class="fa-solid fa-folder"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/plats">Languages <i class="fa-solid fa-laptop-code"></i></a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Service</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="serveAll()">Tout Marquer Servi</a>
+            <a class="dropdown-item" (click)="resetService()">Tout Marquer Non-Servi</a>
+          </div>
+        </li> -->
+      </ul>
+      <div class="d-flex">
+        <input class="form-control me-sm-2" [(ngModel)]="query" type="search" placeholder="Search through">
+        <select [(ngModel)]="table" name="queryTable" class="form-select" id="queryTable">
+          <option value="menus">Projects</option>
+          <option value="plats">Everything</option> 
+        </select>
+        <button (click)="searchQuery()" class="btn btn-secondary my-2 my-sm-0 ms-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>

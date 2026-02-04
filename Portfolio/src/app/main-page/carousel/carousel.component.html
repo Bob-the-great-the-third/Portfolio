@@ -1,0 +1,20 @@
+<div class="carousel-card">
+  <div class="carousel-img-wrapper" 
+       *ngIf="currentImage"
+       (mouseenter)="pauseProgress()" 
+       (mouseleave)="resumeProgress()">
+    <img [src]="currentImage.img_path" class="carousel-img" alt="Featured Game">
+    <div class="carousel-info">
+      <div class="carousel-progress-bar" [style.width.%]="progress"></div>
+      <div class="carousel-over-picture-info">
+        <div class="carousel-title">{{ items[currentIndex].nom }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="carousel-selectors" *ngIf="isLoaded && items && items.length > 0">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div class="carousel-selector" [class.active]="i === currentIndex" (click)="goTo(i)">
+    </div>
+  </ng-container>
+</div>

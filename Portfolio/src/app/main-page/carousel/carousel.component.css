@@ -1,0 +1,84 @@
+.carousel-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.carousel-selector {
+  position: relative;
+  width: 2vw;
+  height: 0.9vh;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.carousel-selector.active {
+  background: rgba(145, 0, 241, 1);
+  width: 2.8vw;
+  height: 1vh;
+  transition: all 0.4s;
+}
+
+.carousel-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Positionne la barre en bas de l'image */
+  height: 0.7vh;
+  background: rgba(145, 0, 241, 1);
+  transition: width 0.05s linear;
+  z-index: 3;
+  border-radius: 0 0 2vh 2vh; /* Arrondi seulement en bas pour suivre l'image */
+}
+
+.carousel-card {
+  height: 80vh;
+  top: 10vh;
+  width: 90%;
+  position: relative; /* Ajouté pour le positionnement absolu des enfants */
+}
+
+.carousel-img {
+  height: 65vh;
+  width: 100%;
+  border-radius: 2vh; /* Border-radius pour l'image */
+  object-fit: cover; /* Pour maintenir les proportions */
+}
+
+.carousel-info {
+  height: 65vh;
+  width: 100%;
+  position: absolute;
+  top: 0; /* Positionne au même niveau que l'image */
+  left: 0;
+  border-radius: 2vh; /* Même border-radius que l'image */
+  overflow: hidden; /* Important : empêche la barre de dépasser */
+  pointer-events: none; /* Permet les interactions avec l'image en dessous */
+  background: linear-gradient(to right, rgba(0, 0, 0,0.8),  rgba(0, 0, 0, 0.3));
+}
+
+.carousel-title {
+  position: absolute;
+  bottom: 2vh; /* Positionne le titre au-dessus de la barre */
+  left: 1vh;
+  color: white;
+  font-weight: bold;
+  z-index: 4;
+  pointer-events: auto; /* Réactive les interactions pour le titre si nécessaire */
+}
+
+.carousel-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  border-radius: 2vh;
+  overflow: hidden;
+}

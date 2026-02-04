@@ -1,0 +1,113 @@
+{
+    "menus": [
+        {
+            "id": 1,
+            "nom": "Menu Gourmand",
+            "description": "Un menu riche et généreux pour les amateurs de bonne cuisine.",
+            "date_creation": "2025-02-01",
+            "statut": "actif"
+        },
+        {
+            "id": 2,
+            "nom": "Menu Végétarien",
+            "description": "Un menu équilibré sans viande.",
+            "date_creation": "2025-02-03",
+            "statut": "actif"
+        },
+        {
+            "id": 3,
+            "nom": "Menu Express",
+            "description": "Un menu rapide pour une pause déjeuner efficace.",
+            "date_creation": "2025-02-05",
+            "statut": "inactif"
+        },
+        {
+            "id": 4,
+            "nom": "Menu de la Mer",
+            "description": "Un assortiment de produits frais issus de la mer.",
+            "date_creation": "2025-02-06",
+            "statut": "actif"
+        },
+        {
+            "id": 5,
+            "nom": "Menu Saveurs du Monde",
+            "description": "Un voyage culinaire à travers différents continents.",
+            "date_creation": "2025-02-07",
+            "statut": "actif"
+        },
+        {
+            "id": 6,
+            "nom": "Menu Enfant",
+            "description": "Un menu adapté aux plus jeunes, avec des portions réduites.",
+            "date_creation": "2025-02-08",
+            "statut": "actif"
+        },
+        {
+            "id": 7,
+            "nom": "Menu Traditionnel",
+            "description": "Les grands classiques de la cuisine française.",
+            "date_creation": "2025-02-10",
+            "statut": "inactif"
+        },
+        {
+            "id": 8,
+            "nom": "Menu Santé",
+            "description": "Un menu équilibré et léger pour une alimentation saine.",
+            "date_creation": "2025-02-12",
+            "statut": "actif"
+        }
+    ],
+    "plats": [
+        { "id": 1, "menuId": 1, "nom": "Foie gras mi-cuit", "calories": 450 },
+        { "id": 2, "menuId": 1, "nom": "Magret de canard sauce miel", "calories": 600 },
+        { "id": 3, "menuId": 1, "nom": "Tarte tatin", "calories": 350 },
+        { "id": 4, "menuId": 2, "nom": "Salade de quinoa et avocat", "calories": 300 },
+        { "id": 5, "menuId": 2, "nom": "Tofu grillé aux légumes", "calories": 400 },
+        { "id": 6, "menuId": 3, "nom": "Sandwich jambon beurre", "calories": 450 },
+        { "id": 7, "menuId": 3, "nom": "Tarte aux pommes", "calories": 280 },
+        { "id": 8, "menuId": 4, "nom": "Huîtres fraîches", "calories": 150 },
+        { "id": 9, "menuId": 4, "nom": "Saumon grillé citronné", "calories": 350 },
+        { "id": 10, "menuId": 5, "nom": "Couscous royal", "calories": 700 },
+        { "id": 11, "menuId": 5, "nom": "Ramen au porc", "calories": 600 },
+        { "id": 12, "menuId": 5, "nom": "Tiramisu", "calories": 500 },
+        { "id": 13, "menuId": 6, "nom": "Nuggets de poulet", "calories": 450 },
+        { "id": 14, "menuId": 6, "nom": "Purée de pommes de terre", "calories": 250 },
+        { "id": 15, "menuId": 6, "nom": "Compote de pommes", "calories": 180 },
+        { "id": 16, "menuId": 7, "nom": "Bœuf bourguignon", "calories": 600 },
+        { "id": 17, "menuId": 7, "nom": "Gratin dauphinois", "calories": 500 },
+        { "id": 18, "menuId": 8, "nom": "Salade verte aux noix", "calories": 200 },
+        { "id": 19, "menuId": 8, "nom": "Pavé de saumon vapeur", "calories": 350 }
+    ],
+    "types_plats": [
+        { "id": 1, "nom": "Risotto aux champignons", "calories_defaut": 450 },
+        { "id": 2, "nom": "Salade César", "calories_defaut": 300 },
+        { "id": 3, "nom": "Filet de bœuf sauce poivre", "calories_defaut": 550 },
+        { "id": 4, "nom": "Pâtes carbonara", "calories_defaut": 650 },
+        { "id": 5, "nom": "Poulet rôti", "calories_defaut": 400 },
+        { "id": 6, "nom": "Gratin dauphinois", "calories_defaut": 500 },
+        { "id": 7, "nom": "Ratatouille", "calories_defaut": 250 },
+        { "id": 8, "nom": "Soupe à l'oignon", "calories_defaut": 300 },
+        { "id": 9, "nom": "Pizza margherita", "calories_defaut": 700 },
+        { "id": 10, "nom": "Tarte aux fraises", "calories_defaut": 320 },
+        { "id": 11, "nom": "Crème brûlée", "calories_defaut": 400 },
+        { "id": 12, "nom": "Poêlée de légumes", "calories_defaut": 200 },
+        { "id": 13, "nom": "Sushis saumon", "calories_defaut": 350 },
+        { "id": 14, "nom": "Mousse au chocolat", "calories_defaut": 450 },
+        { "id": 15, "nom": "Brochettes de poulet", "calories_defaut": 500 },
+        { "id": 16, "nom": "Omelette aux champignons", "calories_defaut": 300 },
+        { "id": 17, "nom": "Cordon bleu", "calories_defaut": 600 },
+        { "id": 18, "nom": "Lasagnes bolognaise", "calories_defaut": 750 },
+        { "id": 19, "nom": "Paella", "calories_defaut": 650 },
+        { "id": 20, "nom": "Gâteau au chocolat", "calories_defaut": 500 },
+        { "id": 21, "nom": "Nouilles sautées", "calories_defaut": 600 },
+        { "id": 22, "nom": "Cassoulet", "calories_defaut": 800 },
+        { "id": 23, "nom": "Falafel", "calories_defaut": 400 },
+        { "id": 24, "nom": "Bruschetta", "calories_defaut": 350 },
+        { "id": 25, "nom": "Soupe miso", "calories_defaut": 150 },
+        { "id": 26, "nom": "Bœuf stroganoff", "calories_defaut": 700 },
+        { "id": 27, "nom": "Poisson en papillote", "calories_defaut": 300 },
+        { "id": 28, "nom": "Gaufre au sucre", "calories_defaut": 380 },
+        { "id": 29, "nom": "Tarte flambée", "calories_defaut": 500 },
+        { "id": 30, "nom": "Salade niçoise", "calories_defaut": 400 }
+    ]
+}
