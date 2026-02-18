@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @charset "UTF-8";
 
+/* ── Hero ── */
+body {
+  background: linear-gradient(135deg, #001f3f 0%, #0a0a2e 60%, #1a0533 100%);
+  min-height: 100vh;
+}
+
 .slick-slider {
     box-sizing: border-box;
     -webkit-user-select: none;

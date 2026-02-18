@@ -13,16 +13,16 @@
         },
         {
             "id":2,
-            "nom":"Recueil et traitement de données",
+            "nom":"Cousigites - outil automatique pour l'optimisation d'itinéraires",
             "id_categorie":1,
-            "dates":"2024",
-            "infrastructure":"Google Maps API",
+            "dates":"2026",
+            "infrastructure":"Google Manifest v3",
             "statut":"Fini",
             "taille_equipe":1,
-            "description":"TMTC",
+            "description":"Développement d'une extension chrome, fonctionnelle sur de nombreux sites de recherche de gîtes. Permettant de calculer le temps de trajet routier vers le gîte depuis plusieurs origines choisies. L'extension permet de simplifier la recherche de gîtes en simplifiant une étape critique du processus de recherche de gîte pour un rassemblement. La vérification de la distance de chaque participant vers le point de rassemblement.",
+            "github":"https://github.com/Bob-the-great-the-third/CousiGitesExtension",
             "starred":true
         },
-
         {
             "id":3,
             "nom":"Stage de Développement dans Vectory3 BV",
@@ -44,8 +44,7 @@
             "taille_equipe":1,
             "description":"TMTC",
             "starred":false
-        },
-
+        },        
         {
             "id":5,
             "nom":"Portfolio",
@@ -56,19 +55,7 @@
             "taille_equipe":1,
             "description":"TMTC",
             "starred":false
-        },
-        {
-            "id":6,
-            "nom":"Cousigites",
-            "id_categorie":2,
-            "dates":"2026",
-            "infrastructure":"Chrome extension",
-            "statut":"En cours",
-            "taille_equipe":1,
-            "description":"TMTC",
-            "starred":true
         }
-
     ],
 
     "competences":[
@@ -76,8 +63,12 @@
         { "id":2, "project_id":1,"competence":"Lire/Écrire dans un fichier csv en Python" },
         { "id":3, "project_id":2,"competence":"Interaction avec Maps API." },
         { "id":4, "project_id":2,"competence":"Création d’un projet à partir d’un besoin client (ma famille)" },
+        { "id":7, "project_id":2,"competence":"Développement d'une extension Chrome" },
         { "id":5, "project_id":3,"competence":"Développement d'outils de modélisation 3D" },
-        { "id":6, "project_id":3,"competence":"Utilisation de l'API Python de Blender" }
+        { "id":6, "project_id":3,"competence":"Utilisation de l'API Python de Blender" },
+        { "id":8, "project_id":4,"competence":"Problem Solving" },
+        { "id":9, "project_id":4,"competence":"Optimisation" },
+        { "id":10, "project_id":5,"competence":"Projet AngularJS" }
     ],
 
     "langages":[
@@ -99,10 +90,10 @@
     ],
 
     "categories":[
-        { "id":1, "categ":"Perso"},
-        { "id":2, "categ":"Univ"},
-        { "id":3, "categ":"Pro"},
-        { "id":4, "categ":"Problèmes"}
+        { "id":1, "categ":"Perso", "full_name":"Personnel"},
+        { "id":2, "categ":"Univ","full_name": "Universitaire"},
+        { "id":3, "categ":"Pro", "full_name": "Professionnel"},
+        { "id":4, "categ":"Problèmes", "full_name":"Problèmes"}
     ],
 
     "statuts_possibles":[

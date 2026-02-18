@@ -1,0 +1,153 @@
+.greeting {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.profile-pic-wrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(224, 64, 251, 0.4);
+  box-shadow: 0 0 40px rgba(224, 64, 251, 0.2), 0 0 80px rgba(0, 229, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .profile-pic-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.hero-name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: white;
+}
+
+.highlight-pink {
+  color: #e040fb;
+}
+
+.highlight-teal {
+  color: #00e5ff;
+}
+
+/* ── Social Icons ── */
+.social-icon {
+  color: #aaa;
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #e040fb;
+  transform: translateY(-3px);
+}
+
+/* ── Buttons ── */
+.btn-cta {
+  border-radius: 50px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  border-color: rgba(255,255,255,0.4);
+  transition: all 0.2s;
+}
+
+.btn-cta:hover {
+  border-color: white;
+  background: rgba(255,255,255,0.08);
+}
+
+.btn-cta-gradient {
+  border-radius: 50px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #e040fb, #7c4dff);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-cta-gradient:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* ── Code Window ── */
+.code-window {
+  background: #0d1117;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.code-window-bar {
+  background: #161b22;
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.code-body {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  background: transparent;
+  color: #c9d1d9;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Syntax colors */
+.c-keyword { color: #ff7b72; }
+.c-var     { color: #79c0ff; }
+.c-prop    { color: #d2a8ff; }
+.c-string  { color: #a5d6ff; }
+.c-bool    { color: #79c0ff; }
+.c-num     { color: #f2cc60; }
+.c-this    { color: #ff7b72; }
+
+/* ── About Section ── */
+.section-label {
+  color: #00e5ff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #ccc;
+  max-width: 750px;
+}

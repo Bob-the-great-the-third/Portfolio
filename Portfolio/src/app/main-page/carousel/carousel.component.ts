@@ -11,6 +11,12 @@ import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../models/project';
 import { ProjectImage } from '../../models/project-image';
 import { RouterLink } from '@angular/router'; // ✅ Importe RouterLink
+import { Langage } from '../../models/langage';       // adjust path  
+import { Competence } from '../../models/competence'; // adjust path  
+import { Categorie } from '../../models/categorie';     // adjust path
+import { CategoriesService } from '../../services/categories.service';
+import { CompetencesService } from '../../services/competences.service';
+import { LangagesService } from '../../services/langages.service';
 
 @Component({
   selector: 'app-carousel',
@@ -23,6 +29,10 @@ import { RouterLink } from '@angular/router'; // ✅ Importe RouterLink
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit, OnDestroy {
+
+  langages: Langage[] = [];
+  competences: Competence[] = [];
+  categories: Categorie[] = [];
 
   items: Project[] = [];
   images: ProjectImage[] = [];
@@ -37,8 +47,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   constructor(
     private projectService: ProjectsService,
+    private categoriesService: CategoriesService,
+    private competencesService: CompetencesService,
+    private langagesService: LangagesService,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.projectService.getStarredProjects().subscribe(projects => {
@@ -58,6 +71,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
         this.startProgress();
       });
     });
+
+    this.langagesService.getLangages().subscribe(l => this.langages = l);
+    this.competencesService.getCompetences().subscribe(c => this.competences = c);
+    this.categoriesService.getAllCategs().subscribe(c => this.categories = c);
+
   }
 
   ngOnDestroy() {
@@ -146,5 +164,17 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   get currentImage(): ProjectImage | null {
     return this.images[this.currentIndex] ?? null;
+  }
+
+  getLanguages(projectId: number): Langage[] {
+    return this.langages.filter(l => l.project_id === projectId);
+  }
+
+  getCompetences(projectId: number): Competence[] {
+    return this.competences.filter(c => c.project_id === projectId);
+  }
+
+  getCategoryName(id: number): string {
+    return this.categories.find(c => c.id === id)?.categ ?? 'N/A';
   }
 }

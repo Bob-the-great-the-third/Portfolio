@@ -1,3 +1,4 @@
+/* ── Selectors (dots) ── */
 .carousel-selectors {
   display: flex;
   justify-content: center;
@@ -28,50 +29,12 @@
   transition: all 0.4s;
 }
 
-.carousel-progress-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0; /* Positionne la barre en bas de l'image */
-  height: 0.7vh;
-  background: rgba(145, 0, 241, 1);
-  transition: width 0.05s linear;
-  z-index: 3;
-  border-radius: 0 0 2vh 2vh; /* Arrondi seulement en bas pour suivre l'image */
-}
-
+/* ── Card & image ── */
 .carousel-card {
   height: 80vh;
   top: 10vh;
   width: 90%;
-  position: relative; /* Ajouté pour le positionnement absolu des enfants */
-}
-
-.carousel-img {
-  height: 65vh;
-  width: 100%;
-  border-radius: 2vh; /* Border-radius pour l'image */
-  object-fit: cover; /* Pour maintenir les proportions */
-}
-
-.carousel-info {
-  pointer-events: none; 
-  height: 65vh;
-  width: 100%;
-  position: absolute;
-  top: 0; 
-  left: 0;
-  border-radius: 2vh;
-  overflow: hidden; 
-  background: linear-gradient(to right, rgba(0, 0, 0,0.8),  rgba(0, 0, 0, 0.3));
-}
-
-.carousel-title {
-  position: absolute;
-  bottom: 2vh; /* Positionne le titre au-dessus de la barre */
-  left: 1vh;
-  color: white;
-  font-weight: bold;
-  z-index: 4;
+  position: relative;
 }
 
 .carousel-img-wrapper {
@@ -81,4 +44,142 @@
   height: 65vh;
   border-radius: 2vh;
   overflow: hidden;
+}
+
+.carousel-img {
+  height: 65vh;
+  width: 100%;
+  border-radius: 2vh;
+  object-fit: cover;
+}
+
+/* ── Overlay ── */
+.carousel-info {
+  pointer-events: none;
+  height: 65vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2vh;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(0, 0, 0,0.8), rgba(0, 0, 0, 0.3));
+}
+
+/* ── Progress bar ── */
+.carousel-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.7vh;
+  background: rgba(145, 0, 241, 1);
+  transition: width 0.05s linear;
+  z-index: 3;
+  border-radius: 0 0 2vh 2vh;
+}
+
+/* ── All info grouped bottom-left ── */
+.carousel-over-picture-info {
+  position: absolute;
+  bottom: 2.5vh;
+  left: 2vh;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 55%;
+}
+
+/* ── Title ── */
+.carousel-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+/* ── Top badges row (category + status) ── */
+.carousel-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.carousel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: white;
+  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.carousel-badge--category {
+  background: rgba(145, 0, 241, 0.55);
+  border-color: rgba(145, 0, 241, 0.9);
+}
+
+.carousel-badge--done {
+  background: rgba(25, 135, 84, 0.65);
+  border-color: #198754;
+}
+
+.carousel-badge--wip {
+  background: rgba(255, 193, 7, 0.65);
+  border-color: #ffc107;
+  color: #111;
+}
+
+.carousel-badge--planned {
+  background: rgba(108, 117, 125, 0.65);
+  border-color: #6c757d;
+}
+
+/* ── Meta row (date, team, infra) ── */
+.carousel-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.78rem;
+}
+
+.carousel-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ── Language + competences chips ── */
+.carousel-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lang-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.9);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  backdrop-filter: blur(4px);
+}
+
+.lang-chip--comp {
+  background: rgba(145, 0, 241, 0.45);
+  border-color: rgba(145, 0, 241, 0.8);
+}
+
+.highlight-pink {
+  color: #e040fb;
 }
