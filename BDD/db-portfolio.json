@@ -34,13 +34,35 @@
             "description":"TMTC",
             "starred":true
         },
-
         {
             "id":4,
             "nom":"Euler Project",
-            "id_categorie":1,
-            "dates":"2019 to now",
+            "id_categorie":4,
+            "dates":"2019",
             "infrastructure":"",
+            "statut":"En cours",
+            "taille_equipe":1,
+            "description":"TMTC",
+            "starred":false
+        },
+
+        {
+            "id":5,
+            "nom":"Portfolio",
+            "id_categorie":2,
+            "dates":"2026",
+            "infrastructure":"AngularJS",
+            "statut":"En cours",
+            "taille_equipe":1,
+            "description":"TMTC",
+            "starred":false
+        },
+        {
+            "id":6,
+            "nom":"Cousigites",
+            "id_categorie":2,
+            "dates":"2026",
+            "infrastructure":"Chrome extension",
             "statut":"En cours",
             "taille_equipe":1,
             "description":"TMTC",
@@ -69,7 +91,7 @@
     ],
 
     "images":[
-        { "id":1, "project_id":1, "img_path":"" }
+        { "id":1, "project_id":2, "img_path":"assets/2/maps_api1.png" }
     ],
 
     "videos":[
@@ -86,8 +108,7 @@
     "statuts_possibles":[
         { "id":1, "statut":"Fini"},
         { "id":2, "statut":"En cours"},
-        { "id":3, "statut":"Prévu"},
-        { "id":4, "statut":"Interrompu"}
+        { "id":3, "statut":"Prévu"}
     ],
 
     "euler_project":[

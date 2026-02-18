@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-nav-bar',
+  standalone: true,
+  imports: [
+    FormsModule,
+    RouterLink
+  ], // Ajoute ceci
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })

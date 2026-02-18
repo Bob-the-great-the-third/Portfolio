@@ -18,16 +18,16 @@
     "@angular/platform-browser": "^21.1.2",
     "@angular/platform-browser-dynamic": "^21.1.2",
     "@angular/router": "^21.1.2",
-    "angular": "^1.8.2",
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
     "prj-restaurant": "file:",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.10"
+    "sass": "^1.97.3",
+    "tslib": "^2.8.1",
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.12",
+    "@angular-devkit/build-angular": "^21.1.2",
     "@angular/cli": "^21.1.2",
     "@angular/compiler-cli": "^21.1.2",
     "@types/jasmine": "~5.1.0",
@@ -40,6 +40,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "~5.5.2"
+    "typescript": "~5.9.0"
   }
 }

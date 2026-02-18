@@ -1,0 +1,19 @@
+<h1 class="text-primary">Projects</h1>
+<div class="form-check form-switch d-flex justify-content-between p-3">
+    <div><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Trier Par</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/sort/menus/nom/search/{{this.query}}">Nom</a>
+            <a class="dropdown-item" routerLink="/sort/menus/date_creation/search/{{this.query}}">Date de création</a>
+            <a class="dropdown-item" routerLink="/sort/menus/statut/search/{{this.query}}">Activité</a>
+        </div>
+    </div>
+    <div>
+        <label class="form-check-label ms-2" for="flexSwitchCheckDefault">Afficher uniquement les menus actifs</label>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+    <ng-container *ngFor="let project of projects | async">
+        <app-project-card [project]="project"></app-project-card>
+    </ng-container>
+</div>

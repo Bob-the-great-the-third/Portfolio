@@ -1,0 +1,19 @@
+.text-purple{
+    color: rgb(100, 0, 167);
+}
+
+.text-success-dark {
+  color: #22817A !important; /* Adjust to your preferred darkness */
+}
+
+.text-info-dark {
+  color: #086583 !important;
+}
+
+.text-warning-dark {
+  color: #a23c12 !important;
+}
+
+.text-danger-dark {
+  color: #ae2668 !important;
+}

@@ -7,6 +7,7 @@ export class Project {
         public infrastructure:string="",
         public statut:string="Prévu",
         public taille_equipe:number=1,
-        public starred:boolean=false
+        public starred:boolean=false,
+        public description:string=""
     ){}
 }

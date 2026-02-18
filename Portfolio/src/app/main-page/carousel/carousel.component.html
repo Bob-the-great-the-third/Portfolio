@@ -1,8 +1,10 @@
-<div class="carousel-card">
+<div class="carousel-card" >
   <div class="carousel-img-wrapper" 
        *ngIf="currentImage"
        (mouseenter)="pauseProgress()" 
-       (mouseleave)="resumeProgress()">
+       (mouseleave)="resumeProgress()"
+       [routerLink]="['/projects/', items[currentIndex].id]"
+       >
     <img [src]="currentImage.img_path" class="carousel-img" alt="Featured Game">
     <div class="carousel-info">
       <div class="carousel-progress-bar" [style.width.%]="progress"></div>

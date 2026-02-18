@@ -54,14 +54,14 @@
 }
 
 .carousel-info {
+  pointer-events: none; 
   height: 65vh;
   width: 100%;
   position: absolute;
-  top: 0; /* Positionne au même niveau que l'image */
+  top: 0; 
   left: 0;
-  border-radius: 2vh; /* Même border-radius que l'image */
-  overflow: hidden; /* Important : empêche la barre de dépasser */
-  pointer-events: none; /* Permet les interactions avec l'image en dessous */
+  border-radius: 2vh;
+  overflow: hidden; 
   background: linear-gradient(to right, rgba(0, 0, 0,0.8),  rgba(0, 0, 0, 0.3));
 }
 
@@ -72,10 +72,10 @@
   color: white;
   font-weight: bold;
   z-index: 4;
-  pointer-events: auto; /* Réactive les interactions pour le titre si nécessaire */
 }
 
 .carousel-img-wrapper {
+  cursor: pointer;
   position: relative;
   width: 100%;
   height: 65vh;
