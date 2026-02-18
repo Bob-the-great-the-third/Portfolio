@@ -1,22 +1,53 @@
-<div class="carousel-card" >
-  <div class="carousel-img-wrapper" 
-       *ngIf="currentImage"
-       (mouseenter)="pauseProgress()" 
-       (mouseleave)="resumeProgress()"
-       [routerLink]="['/projects/', items[currentIndex].id]"
-       >
-    <img [src]="currentImage.img_path" class="carousel-img" alt="Featured Game">
+
+<h1 class="highlight-pink">HighLights</h1>
+<div class="carousel-card">
+  <div class="carousel-img-wrapper" *ngIf="currentImage" (mouseenter)="pauseProgress()" (mouseleave)="resumeProgress()"
+    [routerLink]="['/projects/', items[currentIndex].id]">
+    <img [src]="currentImage.img_path" class="carousel-img" alt="Featured Project">
     <div class="carousel-info">
       <div class="carousel-progress-bar" [style.width.%]="progress"></div>
+
+
       <div class="carousel-over-picture-info">
+        <div class="carousel-badges">
+          <span class="carousel-badge carousel-badge--category">
+            <i class="fa-solid fa-tag"></i> {{ getCategoryName(items[currentIndex].id_categorie) }}
+          </span>
+          <span class="carousel-badge" [ngClass]="{
+        'carousel-badge--done':    items[currentIndex].statut === 'Fini',
+        'carousel-badge--wip':     items[currentIndex].statut === 'En cours',
+        'carousel-badge--planned': items[currentIndex].statut === 'Prévu'
+      }">
+            <i class="fa-solid fa-circle-dot"></i> {{ items[currentIndex].statut }}
+          </span>
+        </div>
+
         <div class="carousel-title">{{ items[currentIndex].nom }}</div>
+
+        <div class="carousel-meta">
+          <span><i class="fa-solid fa-calendar-days"></i> {{ items[currentIndex].dates }}</span>
+          <span><i class="fa-solid fa-users"></i> {{ items[currentIndex].taille_equipe }} pers.</span>
+          <span *ngIf="items[currentIndex].infrastructure">
+            <i class="fa-solid fa-server"></i> {{ items[currentIndex].infrastructure }}
+          </span>
+        </div>
+
+        <div class="carousel-langs">
+          <span class="lang-chip" *ngFor="let lang of getLanguages(items[currentIndex].id)">
+            <i class="fa-solid fa-code"></i> {{ lang.langage }}
+          </span>
+          <span class="lang-chip lang-chip--comp">
+            <i class="fa-solid fa-list-check"></i> {{ getCompetences(items[currentIndex].id).length }} compétences
+          </span>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
+
 <div class="carousel-selectors" *ngIf="isLoaded && items && items.length > 0">
   <ng-container *ngFor="let item of items; let i = index">
-    <div class="carousel-selector" [class.active]="i === currentIndex" (click)="goTo(i)">
-    </div>
+    <div class="carousel-selector" [class.active]="i === currentIndex" (click)="goTo(i)"></div>
   </ng-container>
 </div>

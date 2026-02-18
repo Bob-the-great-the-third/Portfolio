@@ -1,0 +1,113 @@
+<!-- Loading State -->
+<div *ngIf="!project" class="container mt-5 text-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Chargement...</span>
+  </div>
+  <p class="mt-2 text-muted">Chargement du projet...</p>
+</div>
+
+<!-- Main Content (Only shows when project is loaded) -->
+<div class="container mt-4" *ngIf="project">
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h1 class="display-4">
+            {{ project.nom }}
+            <i class="bi bi-star-fill text-warning ms-2" *ngIf="project.starred"></i>
+          </h1>
+          
+          <!-- Use the category variable we fetched -->
+          <span class="badge bg-primary me-2" *ngIf="categorie">{{ categorie }}</span>
+          
+          <span class="badge" [ngClass]="{
+            'bg-success': project.statut === 'Fini',
+            'bg-warning': project.statut === 'En cours',
+            'bg-info': project.statut === 'Prévu'
+          }">{{ project.statut }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="row mb-4">
+    <div class="col-md-4 mb-3">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-info">Dates</h6>
+          <p class="card-text fs-5">{{ project.dates }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-info">Équipe</h6>
+          <p class="card-text fs-5">
+            {{ project.taille_equipe }} personne{{ project.taille_equipe > 1 ? 's' : '' }}
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-3" *ngIf="project.infrastructure">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-info">Infrastructure</h6>
+          <p class="card-text fs-5">{{ project.infrastructure }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="card mb-4 border-secondary">
+    <div class="card-body">
+      <h5 class="card-title text-warning">Description</h5>
+      <p class="card-text">{{ project.description }}</p>
+    </div>
+  </div>
+
+  <!-- Languages & Competences -->
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngIf="langages?.length">
+      <div class="card h-100 border-secondary">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Langages</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-dark border border-info" *ngFor="let lang of langages">
+              {{ lang.langage }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4" *ngIf="competences?.length">
+      <div class="card h-100 border-secondary">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Compétences</h5>
+          <ul class="list-unstyled">
+            <li *ngFor="let comp of competences" class="mb-2">
+              <span class="text-success">✔</span> {{ comp.competence }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <div class="row" *ngIf="images?.length">
+    <div class="col-12">
+      <h5 class="text-warning mb-3">Galerie</h5>
+      <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let img of images">
+          <img [src]="img.img_path" class="img-fluid rounded border border-secondary shadow-sm" [alt]="project.nom">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

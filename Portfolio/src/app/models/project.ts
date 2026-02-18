@@ -8,6 +8,7 @@ export class Project {
         public statut:string="Prévu",
         public taille_equipe:number=1,
         public starred:boolean=false,
+        public github:string="",
         public description:string=""
     ){}
 }
